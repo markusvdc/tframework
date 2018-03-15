@@ -1,0 +1,138 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline; }
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+ol, ul {
+  list-style: none; }
+  ol:after, ul:after {
+    content: "";
+    display: table;
+    clear: both; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+a {
+  text-decoration: none;
+  outline: none;
+  display: inline-block; }
+
+body {
+  line-height: 1; }
+
+* {
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box; }
+
+button {
+  outline: 0;
+  cursor: pointer;
+  display: inline-block;
+  margin: 0; }
+
+img {
+  vertical-align: middle;
+  max-width: 100%; }
+
+button, input, select, textarea {
+  outline: none; }
+
+textarea {
+  resize: none; }
+
+em {
+  font-style: italic; }
+
+main {
+  display: block; }
+
+input::placeholder, textarea::placeholder {
+  opacity: 1; }
+
+.home header img {
+  width: 300px;
+  height: auto; }
+.home .banner-home img {
+  width: 300px;
+  height: auto; }
+
+a {
+  color: #6574CD; }
+  a:hover {
+    text-decoration: underline; }
+
+body {
+  font-family: Arial;
+  line-height: 1.4; }
+
+#wrapper {
+  width: 1000px;
+  margin: 0 auto; }
+
+.arquivo {
+  display: block;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase; }
+
+.rotulo, .entry, main, #archive, #sidebar, .nav-below {
+  border: 1px solid #DDD;
+  position: relative;
+  padding: 15px 30px; }
+  .rotulo:after, .entry:after, main:after, #archive:after, #sidebar:after, .nav-below:after {
+    position: absolute;
+    right: 5px;
+    top: 2px;
+    font-size: 11px;
+    font-weight: bold; }
+
+#title-header a {
+  font-size: 24px;
+  font-weight: bold; }
+
+.title-entry {
+  font-size: 20px;
+  font-weight: normal; }
+
+.entry:after {
+  content: ".entry"; }
+
+main:after {
+  content: "main"; }
+
+#archive:after {
+  content: "#archive"; }
+
+.pagination {
+  overflow: hidden; }
+  .pagination > a {
+    float: left; }
+  .pagination ul {
+    float: left; }
+    .pagination ul li {
+      float: left; }
+      .pagination ul li a,
+      .pagination ul li .current {
+        display: inline-block; }
+
+#menu .current_page_item {
+  font-weight: bold; }
+
+/*# sourceMappingURL=wframework.css.map */

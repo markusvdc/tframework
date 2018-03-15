@@ -1,0 +1,102 @@
+@import 'reset'
+
+.home
+    header
+        img
+            width: 300px
+            height: auto
+    .banner-home
+        img
+            width: 300px
+            height: auto 
+
+a
+    color: #6574CD
+    &:hover
+        text-decoration: underline
+
+body
+    font-family: Arial
+    line-height: 1.4
+
+#wrapper
+    width: 1000px
+    margin: 0 auto
+
+.arquivo
+    display: block
+    font-size: 12px
+    font-weight: bold
+    text-transform: uppercase
+    // margin-top: 15px
+    // #wrapper > &
+    //     margin-top: 0
+
+.rotulo
+    border: 1px solid #DDD
+    position: relative
+    padding: 15px 30px
+    &:after
+        position: absolute
+        right: 5px
+        top: 2px
+        font-size: 11px
+        font-weight: bold
+
+#title-header
+    a
+        font-size: 24px
+        font-weight: bold
+
+.title-entry
+    font-size: 20px
+    font-weight: normal
+
+// #results
+//     @extend .rotulo
+//     &:after
+//         content: '#results'
+
+// .item-results
+//     @extend .rotulo
+//     &:after
+//         content: '.item-results'
+
+.entry
+    @extend .rotulo
+    &:after
+        content: '.entry'
+
+main
+    @extend .rotulo
+    &:after
+        content: 'main'
+
+#archive
+    @extend .rotulo
+    &:after
+        content: '#archive'
+
+#sidebar
+    @extend .rotulo
+    &:after
+
+.nav-below
+    @extend .rotulo
+    &:after
+
+.pagination
+    overflow: hidden
+    &>a
+        float: left
+    ul
+        float: left
+        li
+            float: left
+            a,
+            .current
+                display: inline-block
+
+#menu
+    .current_page_item
+        font-weight: bold

@@ -1,0 +1,27 @@
+<?php get_header(); ?>
+<div class="arquivo">single-portfolio.php</div>
+<article class="bpost">
+    <!-- bpog = blog post -->
+    <?php
+    if ( have_posts() ) : while ( have_posts() ) : the_post();
+    ?>
+        <header>
+            <h1><?php the_title(); ?></h1>
+            <?php
+            if ( has_post_thumbnail() ) :
+                the_post_thumbnail();
+            endif;
+            ?>
+        </header>
+        <div class="content-bpost">
+            <?php echo get_the_content() ?>
+        </div>
+        <div class="pagination-bpost">
+            <?php previous_post_link( '%link', '< %title' ); ?>
+            <?php next_post_link( '%link', '%title >' ); ?>
+        </div>
+    <?php
+    endwhile; endif;
+    ?>
+</article>
+<?php get_footer(); ?>
