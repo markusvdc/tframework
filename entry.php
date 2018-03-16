@@ -17,9 +17,10 @@
         the_excerpt();
         ?>
     </section>
-    <div class="type-entry">
-        Post type: <?php echo get_post_type() ?>
-    </div>
+    <ul class="attributes-entry">
+        <li>Post type: <?php echo get_post_type() ?></li>
+        <li>Post format: <?php echo get_post_format() ?></li>
+    </ul>
     <?php
     if ( !is_search() ) :
     ?>

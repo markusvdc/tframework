@@ -66,6 +66,9 @@ main {
 input::placeholder, textarea::placeholder {
   opacity: 1; }
 
+.gallery br {
+  display: none; }
+
 .teste header img {
   width: 400px;
   height: auto; }

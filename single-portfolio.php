@@ -16,6 +16,10 @@
         <div class="content-bpost">
             <?php echo get_the_content() ?>
         </div>
+        <ul class="attributes-bpost">
+            <li>Post type: <?php echo get_post_type() ?></li>
+            <li>Post format: <?php echo get_post_format() ?></li>
+        </ul>
         <div class="pagination-bpost">
             <?php previous_post_link( '%link', '< %title' ); ?>
             <?php next_post_link( '%link', '%title >' ); ?>
