@@ -141,7 +141,7 @@ function portfolio_custom_post_type (){
 		// 'taxonomies' => array('category', 'post_tag'),
 		'menu_position' => 5,
 		'exclude_from_search' => false,
-        'menu_icon'   => 'dashicons-screenoptions',
+        'menu_icon'   => 'dashicons-portfolio',
 	);
 	register_post_type('portfolio',$args);
 }
@@ -154,18 +154,16 @@ add_action('init','portfolio_custom_post_type');
 */
 function banner_custom_post_type (){
 	$labels = array(
-		'name' => 'Banner',
+		'name' => 'Banners',
 		'singular_name' => 'Banner',
 		'add_new' => 'Adicionar novo',
 		'all_items' => 'Todos os banners',
-		'add_new_item' => 'Add Item',
+		'add_new_item' => 'Adicionar banner',
 		'edit_item' => 'Editar banner',
-		'new_item' => 'New Item',
+		'new_item' => 'Novo banner',
 		'view_item' => 'Ver banner',
-		'search_item' => 'Search Banner',
-		'not_found' => 'No items found',
-		'not_found_in_trash' => 'No items found in trash',
-		'parent_item_colon' => 'Parent Item',
+		'search_item' => 'Procurar banner',
+		'not_found' => 'Nenhum banner encontrado',
 		'attributes' => 'Atributos',
 		'featured_image' => 'Imagem',
 		'set_featured_image' => 'Selecionar imagem',
@@ -192,6 +190,47 @@ function banner_custom_post_type (){
 	register_post_type('banner',$args);
 }
 add_action('init','banner_custom_post_type');
+
+/*
+	==========================================
+	Clientes Custom Post Type
+	==========================================
+*/
+function cliente_custom_post_type (){
+	$labels = array(
+		'name' => 'Clientes',
+		'singular_name' => 'Clientes',
+		'add_new' => 'Adicionar novo',
+		'all_items' => 'Todos os clientes',
+		'add_new_item' => 'Adicionar cliente',
+		'edit_item' => 'Editar cliente',
+		'new_item' => 'Novo cliente',
+		'view_item' => 'Ver cliente',
+		'search_item' => 'Procurar cliente',
+		'not_found' => 'Nenhum cliente encontrado',
+		'attributes' => 'Atributos',
+	);
+	$args = array(
+		'labels' => $labels,
+		'public' => true,
+		'has_archive' => false,
+		'publicly_queryable' => false,
+		'query_var' => true,
+		'rewrite' => true,
+		'capability_type' => 'post',
+		'hierarchical' => false,
+		'supports' => array(
+			'title',
+			'editor',
+			'page-attributes',
+		),
+		'menu_position' => 6,
+		'exclude_from_search' => true,
+        'menu_icon'   => 'dashicons-groups',
+	);
+	register_post_type('cliente',$args);
+}
+add_action('init','cliente_custom_post_type');
 
 /*
 	==========================================
@@ -239,21 +278,3 @@ function remove_menus(){
     // remove_menu_page( 'site-migration-export' );
 }
 add_action( 'admin_menu', 'remove_menus' );
-
-/*
-	==========================================
-	Remover edição rápida
-	==========================================
-*/
-function remove_post_row_actions( $actions, $post )
-{
-    return array();
-    return $actions;
-}
-function remove_page_row_actions( $actions, $post )
-{
-    return array();
-    return $actions;
-}
-add_filter( 'post_row_actions', 'remove_post_row_actions', 10, 2 );
-add_filter( 'page_row_actions', 'remove_page_row_actions', 10, 2 );

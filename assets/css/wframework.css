@@ -66,10 +66,10 @@ main {
 input::placeholder, textarea::placeholder {
   opacity: 1; }
 
-.home header img {
-  width: 300px;
+.teste header img {
+  width: 400px;
   height: auto; }
-.home .banner-home img {
+.teste .banner-teste img {
   width: 300px;
   height: auto; }
 
@@ -80,7 +80,9 @@ a {
 
 body {
   font-family: Arial;
-  line-height: 1.4; }
+  line-height: 1.4;
+  padding-top: 20px;
+  padding-bottom: 150px; }
 
 #wrapper {
   width: 1000px;

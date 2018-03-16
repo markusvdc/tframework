@@ -18,7 +18,7 @@
         ?>
     </section>
     <div class="type-entry">
-        Post Type: <?php echo get_post_type() ?>
+        Post type: <?php echo get_post_type() ?>
     </div>
     <?php
     if ( !is_search() ) :
