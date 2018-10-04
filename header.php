@@ -3,7 +3,9 @@
 <head>
     <meta charset="<?php bloginfo( 'charset' ); ?>" />
     <meta name="viewport" content="width=device-width" />
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri() ?>/assets/css/wframework.css">
+    <script src="<?php echo get_template_directory_uri() ?>/assets/js/wordpress.js" charset="utf-8"></script>
     <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
