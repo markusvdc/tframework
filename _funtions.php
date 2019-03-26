@@ -281,3 +281,5 @@ function portfolio_custom_taxonomies() {
 	register_taxonomy('field', array('portfolio'), $args);
 }
 add_action( 'init' , 'portfolio_custom_taxonomies' );
+
+//teste
