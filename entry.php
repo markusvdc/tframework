@@ -26,6 +26,13 @@
     ?>
         <footer>
             <div class="category-entry">Categorias: <?php the_category( ', ' ); ?></div>
+            <?php
+                if ( get_post_type() == 'portfolio' || is_tax('portfolio-categoria') ) :
+            ?>
+                    <div class="category-entry">Categorias taxonomy: <?php echo awesome_get_terms( $post->ID, 'portfolio-categoria' ); ?></div>
+            <?php
+                endif;
+            ?>
             <div class="tag-entry"><?php the_tags('Tags: '); ?></div>
         </footer>
     <?php

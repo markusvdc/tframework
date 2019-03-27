@@ -13,17 +13,13 @@ function blankslate_setup()
 require get_template_directory() . '/functions/post-type.php';
 require get_template_directory() . '/functions/ajax-pagination.php';
 
-/*
-	==========================================
+/*==========================================
 	Customizações começam aqui
-	==========================================
-*/
+==========================================*/
 
-/*
-	==========================================
+/*==========================================
 	Remover itens do admin menu
-	==========================================
-*/
+==========================================*/
 function remove_menus(){
     // remove_menu_page( 'themes.php' );
     // remove_menu_page( 'edit-comments.php' );
@@ -33,28 +29,22 @@ function remove_menus(){
 }
 add_action( 'admin_menu', 'remove_menus' );
 
-/*
-	==========================================
+/*==========================================
 	Remove style inline das galeria de post
-	==========================================
-*/
+==========================================*/
 add_filter( 'use_default_gallery_style', '__return_false' );
 
-/*
-	==========================================
+/*==========================================
 	Altera quantidade de caracteres do excerpt
-	==========================================
-*/
+==========================================*/
 function wpdocs_custom_excerpt_length( $length ) {
     return 20;
 }
 add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
 
-/*
-	==========================================
+/*==========================================
 	Altera a reticências do excerpt para link 'ver mais'
-	==========================================
-*/
+==========================================*/
 function wpdocs_excerpt_more( $more ) {
     return sprintf( '... <a class="read-more" href="%1$s">%2$s</a>',
         get_permalink( get_the_ID() ),
@@ -62,3 +52,18 @@ function wpdocs_excerpt_more( $more ) {
     );
 }
 add_filter( 'excerpt_more', 'wpdocs_excerpt_more' );
+
+/*==========================================
+	Mostra as taxonomies customizadas 
+==========================================*/
+function awesome_get_terms( $postID, $term ){
+	$terms_list = wp_get_post_terms($postID, $term); 
+	$output = '';
+					
+	$i = 0;
+	foreach( $terms_list as $term ){ $i++;
+		if( $i > 1 ){ $output .= ', '; }
+		$output .= '<a href="' . get_term_link( $term ) . '">'. $term->name .'</a>';
+	}
+	return $output;
+}

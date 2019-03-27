@@ -138,16 +138,16 @@ add_action('init','cliente_custom_post_type');
 */
 function portfolio_custom_taxonomies() {
 	$labels = array(
-		'name' => 'Tipos',
-		'singular_name' => 'Tipo',
-		'search_items' => 'Search Tipos',
-		'all_items' => 'All Tipos',
-		'edit_item' => 'Editar Tipo',
-		'update_item' => 'Atualizar Tipo',
-		'add_new_item' => 'Adicionar novo Tipo',
-		'new_item_name' => 'Novo nome Tipo',
-		'menu_name' => 'Tipos',
-		'not_found' => 'Nenhum tipo encontrado',
+		'name' => 'Categorias',
+		'singular_name' => 'Categoria',
+		'search_items' => 'Buscar categorias',
+		'all_items' => 'Todas categorias',
+		'edit_item' => 'Editar categoria',
+		'update_item' => 'Atualizar categoria',
+		'add_new_item' => 'Adicionar nova categoria',
+		'new_item_name' => 'Novo nome categoria',
+		'menu_name' => 'Categorias',
+		'not_found' => 'Nenhuma categoria encontrada',
 	);
 
 	$args = array(
@@ -156,9 +156,9 @@ function portfolio_custom_taxonomies() {
 		'show_ui' => true,
 		'show_admin_column' => true,
 		'query_var' => true,
-		'rewrite' => array( 'slug' => 'tipo' ),
+		'rewrite' => array( 'slug' => 'portfolio-categoria' ),
 	);
 
-	register_taxonomy('field', array('portfolio'), $args);
+	register_taxonomy('portfolio-categoria', array('portfolio'), $args);
 }
 add_action( 'init' , 'portfolio_custom_taxonomies' );
