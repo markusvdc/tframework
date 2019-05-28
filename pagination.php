@@ -12,6 +12,10 @@ $args = array(
     'prev_next' => false
 );
 
+// print_r('<pre>');
+// print_r($wp_query);
+// print_r('</pre>');
+
 ?>
 <?php global $wp_query; if ( $wp_query->max_num_pages > 1 ) { ?>
     <span class="arquivo">pagination.php</span>

@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<span class="arquivo">archive-portfolio.php</span>
+<span class="arquivo">taxonomy-categoriap.php</span>
 <section id="blog">
     <h1>
     <?php

@@ -1,4 +1,5 @@
 <?php get_header(); ?>
+
 <div class="arquivo">page-teste.php</div>
 <section id="post-<?php the_ID(); ?>" <?php post_class('teste'); ?>>
 

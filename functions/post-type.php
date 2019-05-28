@@ -156,9 +156,9 @@ function portfolio_custom_taxonomies() {
 		'show_ui' => true,
 		'show_admin_column' => true,
 		'query_var' => true,
-		'rewrite' => array( 'slug' => 'portfolio-categoria' ),
+		'rewrite' => array( 'slug' => 'categoriap' ),
 	);
 
-	register_taxonomy('portfolio-categoria', array('portfolio'), $args);
+	register_taxonomy('categoriap', array('portfolio'), $args);
 }
 add_action( 'init' , 'portfolio_custom_taxonomies' );

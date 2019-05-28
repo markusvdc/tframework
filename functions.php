@@ -11,7 +11,7 @@ function blankslate_setup()
 }
 
 require get_template_directory() . '/functions/post-type.php';
-require get_template_directory() . '/functions/ajax-pagination.php';
+// require get_template_directory() . '/functions/ajax-pagination.php';
 
 /*==========================================
 	Customizações começam aqui
@@ -65,5 +65,6 @@ function awesome_get_terms( $postID, $term ){
 		if( $i > 1 ){ $output .= ', '; }
 		$output .= '<a href="' . get_term_link( $term ) . '">'. $term->name .'</a>';
 	}
+	
 	return $output;
 }

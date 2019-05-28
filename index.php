@@ -17,10 +17,10 @@
         endwhile; endif;
         ?>
     </div>
-    <a class="btn-sunset-load sunset-load-more" data-page="1" data-url="<?php echo admin_url('admin-ajax.php'); ?>">
+    <!-- <a class="btn-sunset-load sunset-load-more" data-page="1" data-url="<?php // echo admin_url('admin-ajax.php'); ?>">
         <span class="sunset-icon sunset-loading"></span>
         <span class="text">Load More</span>
-    </a>
+    </a> -->
     <?php
     get_template_part( 'pagination' );
     ?>
